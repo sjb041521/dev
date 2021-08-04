@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gcp-study-321416",
+  "private_key_id": "0fe5cf02bfff8ec8bf896b3efbf56505a925a5ff",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC3wROGGTzeP0a0\n9SFmlA7XFKKOWSkL4YnNMzkwCqGOSSlLapPXK2D8Mq65B5y7uZhotYtBjqlYJKUE\n5TrbPKvROcyoOsFZc3pbqfSpUM70dpyFPEC4u7utgFHAs2Sg1YwcvudwxLrjJx0l\n3UPwVaO8mKsCCU369XTKx01XlGFn1uziMtyOC2CnbHkxL9/L+w5OhI3E58UYglCV\nqneuKhr9n+1IBNXCR3QSjz/vzPzRMV98WLk08Ns6QzX8lOBNo3VIUs7jDnyzXZ07\nXZwUsm2Fz/GjENprdmwwWRW8d6XDoZaEVwk2Hr5+9qomYdStB03aM0phTqZTRoqD\n8z1khM4/AgMBAAECggEADw1lZIg/uLL1P1CPPmBlgM/jawa5uovspl8KUbmlN0sd\n81wVJTyb8rzSHD0X5TbUWct5T1L440wJKof+lMP5DSgPcD5z5Th07vpSnOYONe9b\nbfycDqXuP02yJLdtSFGF6zrmKZIr/vyOwjHIZXEWexYEeCO7/BFMUmoWF1UDz6Yj\nEOOM4ZGtZYrfN+P7AUTPojecLJ5aqGYqrblAMNK6fVkkR0tyKZRqqkeQnsN08HBf\nnLsDsXs9Nujca0ingChgNb9ftY9UE8Q8MyvBY/4HcVIVntijm5NS4kJmSMqj6eZ2\n3eWYeX5dawxIBAIBi5aJELVV3fYnutcu/FD0wAGQ4QKBgQD7Ut3ygX1gb7jfvKxs\n8aHFHOSok2FTkpV2FLOfzMRZrwJzTk3MCADPs1o4aaGYmBxFAwvtm2gyX4d4q8lK\n9HvDpD5DLCpjYVP3yBJQZQHDPm6DXVnSomiGt/yjpRNG4EaLLx5/MafbZ1pkU3Au\nPbm+eMrdHjPPG9oJ9vuSPe2pXwKBgQC7LFrQe9+2MvfHAZTuLgWaNdVI0lHPKmCV\nLJaFwysuq5iC2RZdDpSMcr9MagHrUji+9dMnLhn41wKh3Zt0gHpKqHac+tE7k/jQ\nnDv8U1/pqP3dt4ETjbBjC9CzdY0DSD2DoFns127bNFTcTk40jqDoOx8C4qLIe1sn\nI+UjubunIQKBgDVkdniFoAAz2//UUoFWmDqLF9zkaqHZm10ZqsuBMhmnf4rFkOuO\nq7V0ce9YKZeEgUT8D7Wr9Wf2OY6eWEZPSFfY9c1JfbvdOnyCibmAq+4xvkK0O1fv\nXut3/Pk7IaxGC1aYbQ8ymmmXPHHh9Awu2t4nRVnSh8kxLpI9YVbBR1NbAoGAU+f/\nUgSl9eSFRNYFsHw7ELVfRoTaHbeOknDpjU8/lW1hMg8lQlQd7ZQnA5dmAtraC2jh\n3meBRxcD3BIe9Sv/Jma8vYSGtWGRIdtX3LZ3gaS7IWB44Y4b61rJlRl2PGlvAgmp\nJk4xKN0dyaDk2BS0N0cBkOaOOLdr1nD18Hz7jWECgYEAojpnq/w4imhAwse7/DCj\nib/ca/Ny6UwNEWO9RP2SoMSeqwpE+R+ERgsiT8bf0yF8Iy4M6FFI/XXCWEHOQqJs\nNiVMyZImM/60nwjTUbRaJV8uyZiKRqiajRd7Qsc2FbSCh8jGyUXd7nu76JS+H642\nHcygpmrIJ2wm6I3yFpTXKTg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "tweet-client@gcp-study-321416.iam.gserviceaccount.com",
+  "client_id": "109765626159897287944",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tweet-client%40gcp-study-321416.iam.gserviceaccount.com"
+}
