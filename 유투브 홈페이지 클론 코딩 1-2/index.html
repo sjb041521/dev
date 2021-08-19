@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/1ca877483b.js" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- 헤더 -->
+    <div class="header">
+        <!-- 메뉴 바 -->
+        
+        <div class="header_margin">
+            <button class="menubar" onclick="openMenuButton()" id="toc-toggle"type="button" >
+                <i class="fas fa-bars"></i></button>
+
+            <!-- 유튜브 로고 -->
+            <div class="youtube_logo">
+                <i class="fab fa-youtube" id="youtube_log_image"></i>
+                <a id="youtube_log_image" href="https://www.youtube.com/">YouTube</a>
+        </div>
+
+        <div class="header_margin">
+             <!-- 검색 창 -->
+        <form action="https://www.youtube.com/results" class="search_st" method="get">
+            <div class="search_form">
+                 <!-- 검색 창 -->
+                <input class="search" type="text" placeholder="검색" name="search_query" >
+                 <!-- 키보드 -->
+                <a class="keyboard"><i class="fas fa-keyboard"></i></a>
+            </div>
+        </form>
+        
+        <!--검색 버튼  -->
+        <button class="search_button "><i class="fas fa-search" title="검색" ></i></button>
+        <!-- 마이크 -->
+        <div class="microphone "><i class="fas fa-microphone" title="음성으로 검색" ></i></div>
+        </div>
+       
+        <div class="header_margin ">
+            <!-- 동영상 업로드 -->
+            <div class="upload_video">
+                <i class="fas fa-video" id="image" title="만들기"></i>
+            </div>
+            <!-- 유투브 메뉴 -->
+            <div class="app_menu">
+                <i class="fas fa-th" id="image" title="YouTube 앱"></i>
+            </div>
+            <!-- 알람 설정 -->
+            <div class="alam">
+                <i class="fas fa-bell" id="image" title="알림"></i>
+            </div>
+            <button class="profile_imager" onclick="profile_button_on()" id="toc-toggle"type="button" >
+                <img class="profile_image"   src="./image/다운로드.jpg" alt="">
+
+            
+               
+        </div>
+
+        
+    </div>
+    </div>
+</head>
+<body>
+
+    <!-- 추천 리스트 키워드 -->
+    <div class="recommend_list"> 
+        <ul class="recommend_list_height">
+            <li class="list_all">전체</li>
+            <li class="list_all_not">음악</li>
+            <li class="list_all_not">로스트 아크</li>
+            <li class="list_all_not">영화</li>
+            <li class="list_all_not">만화</li>
+            <li class="list_all_not">게임</li>
+            <li class="list_all_not">리그 오브 레전드</li>
+            <li class="list_all_not">맛집</li>
+            <li class="list_all_not">운동</li>
+            <li class="list_all_not">헬스</li>
+            <li class="list_all_not">소서리스</li>
+            <li class="list_all_not">메이플</li>
+            <li class="list_all_not">롤</li>
+        </ul>
+        </div>
+<div class="body">
+   <!-- 영상 목록 -->
+   <div class="video-list">
+    <div class="media_list">
+        <div class="media_list_one" id="video_object">
+            <video src=""    class="video" id="video_play"></video>
+        </div>
+        <div class="media_list_one" id="video_object">
+            <video src="./video/KakaoTalk_20210815_084330098.mp4"  onmouseover="this.play()" onmouseout="this.pause()" class="video" id="video_play"></video>
+            <div class="profile">
+                <img class="profile_image"src="./image/다운로드.jpg" alt="">
+                <div class="yy">
+                    <li class="title">안녕</li>
+                    <li class="name">sjb041521</li>
+                    <div>
+                        <li class="time_count">조회수 4.5천회 · 55분전</li>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="media_list_one">
+            <video src="./video/KakaoTalk_20210815_084330098.mp4" onmouseover="this.play()" onmouseout="this.pause()" class="video" id="video_play"></video>
+            <div class="profile">
+                <img class="profile_image"src="./image/다운로드.jpg" alt="">
+                <div class="yy">
+                    <li class="title">안녕</li>
+                    <li class="name">sjb041521</li>
+                    <div>
+                        <li class="time_count">조회수 4.5천회 · 55분전</li>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="media_list_one">
+            <video src="./video/KakaoTalk_20210815_084330098.mp4"  class="video" onmouseover="this.play()" onmouseout="this.pause()" id="video_play"></video>
+            <div class="profile">
+                <img class="profile_image"src="./image/다운로드.jpg" alt="">
+                <div class="yy">
+                    <li class="title">안녕</li>
+                    <li class="name">sjb041521</li>
+                    <div>
+                        <li class="time_count">조회수 4.5천회 · 55분전</li>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="media_list_one">
+            <video src="./video/KakaoTalk_20210815_084330098.mp4"  class="video" onmouseover="this.play()" onmouseout="this.pause()" id="video_play"></video>
+            <div class="profile">
+                <img class="profile_image"src="./image/다운로드.jpg" alt="">
+                <div class="yy">
+                    <li class="title">안녕</li>
+                    <li class="name">sjb041521</li>
+                    <div>
+                        <li class="time_count">조회수 4.5천회 · 55분전</li>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="media_list_one">
+            <video src="./video/KakaoTalk_20210815_084330098.mp4"  class="video" onmouseover="this.play()" onmouseout="this.pause()" id="video_play"></video>
+            <div class="profile">
+                <img class="profile_image"src="./image/다운로드.jpg" alt="">
+                <div class="yy">
+                    <li class="title">안녕</li>
+                    <li class="name">sjb041521</li>
+                    <div>
+                        <li class="time_count">조회수 4.5천회 · 55분전</li>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="media_list_one">
+            <video src="./video/KakaoTalk_20210815_084330098.mp4"  class="video" onmouseover="this.play()" onmouseout="this.pause()" id="video_play"></video>
+            <div class="profile">
+                <img class="profile_image"src="./image/다운로드.jpg" alt="">
+                <div class="yy">
+                    <li class="title">안녕</li>
+                    <li class="name">sjb041521</li>
+                    <div>
+                        <li class="time_count">조회수 4.5천회 · 55분전</li>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="media_list_one">
+            <video src="./video/KakaoTalk_20210815_084330098.mp4"  class="video" onmouseover="this.play()" onmouseout="this.pause()" id="video_play"></video>
+            <div class="profile">
+                <img class="profile_image"src="./image/다운로드.jpg" alt="">
+                <div class="yy">
+                    <li class="title">안녕</li>
+                    <li class="name">sjb041521</li>
+                    <div>
+                        <li class="time_count">조회수 4.5천회 · 55분전</li>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="media_list_one">
+            <video src="./video/KakaoTalk_20210815_084330098.mp4"  class="video" onmouseover="this.play()" onmouseout="this.pause()" id="video_play"></video>
+            <div class="profile">
+                <img class="profile_image"src="./image/다운로드.jpg" alt="">
+                <div class="yy">
+                    <li class="title">안녕</li>
+                    <li class="name">sjb041521</li>
+                    <div>
+                        <li class="time_count">조회수 4.5천회 · 55분전</li>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+
+        
+    </div>
+</div>
+</div>    
+
+
+           <!-- 왼쪽 메뉴바 -->
+           <div class="left_menu">
+               <div class="main_slide" id=main_slide_list>
+                <div class="header_margin" id="slide_header">
+                    <button class="menubar" onclick="openMenuButton()" id="toc-toggle"type="button" >
+                        <i class="fas fa-bars"></i></button>
+        
+                    <!-- 유튜브 로고 -->
+                    <div class="youtube_logo" >
+                        <i class="fab fa-youtube" id="youtube_log_image"></i>
+                        <a id="youtube_log_image" href="https://www.youtube.com/">YouTube</a>
+                    </div>
+                </div>
+                <div class="slide_home_menu">
+                    <div class="home_menu" >
+                        <i class="fas fa-home" id="left_menu_image"></i>
+                        <li id="menu_font">홈</li>
+                    </div>
+                    <div class="home_menu">
+                        <i class="fas fa-compass" id="left_menu_image2"></i>
+                        <li id="menu_font">탐색</li>
+                    </div>
+                    <div class="home_menu border-bottom" id="home_content ">
+                        <svg class="svg_size"  viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" ><g class="style-scope yt-icon"><path d="M18.7 8.7H5.3V7h13.4v1.7zm-1.7-5H7v1.6h10V3.7zm3.3 8.3v6.7c0 1-.7 1.6-1.6 1.6H5.3c-1 0-1.6-.7-1.6-1.6V12c0-1 .7-1.7 1.6-1.7h13.4c1 0 1.6.8 1.6 1.7zm-5 3.3l-5-2.7V18l5-2.7z" class="style-scope yt-icon"></path></g></svg>
+                        <li id="menu_font">구독</li>
+                    </div>
+                    <div class="home_menu">
+                        <svg class="svg_size" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" ><g class="style-scope yt-icon"><path fill="none" d="M0 0h24v24H0z" class="style-scope yt-icon"></path><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z" class="style-scope yt-icon"></path></g></svg>
+                        <li id="menu_font">보관함</li>
+                    </div>
+                    <div class="home_menu hideen_image">
+                        <i class="fas fa-history hideen_image_size"></i>
+                        <li id="menu_font">시청기록</li>
+                    </div>
+
+                    <div class="home_menu hideen_image">
+                        <i class="fas fa-play hideen_image_size"></i>
+                         <li id="menu_font">내 동영상</li>
+                     </div>
+
+                    <div class="home_menu hideen_image">
+                        <i class="fas fa-clock hideen_image_size"></i>
+                        <li id="menu_font">나중에 볼 동영상</li>
+                    </div>
+
+                    <div class="home_menu hideen_image border-bottom">
+                        <i class="fas fa-thumbs-up hideen_image_size"></i>
+                        <li id="menu_font">좋아요 표시한 동영상</li>
+                    </div>
+                    
+                </div>
+             
+          
+               </div>
+        </div>
+
+<div class="hidden_area" id="hidden_area_id">
+
+</div>
+
+<div class="profile_on" id="test">
+   <div class="header_profile_container">
+        <img class="profile_image"   src="./image/다운로드.jpg" alt="">
+        <div class="header_container">
+           <li class="container_font">박명진</li>  
+           <li class="container_font1">Google 계정 관리</li>
+        </div>
+        
+   </div>
+
+       <div class="header_profile_container_scroll">
+        <div class="">
+            <div class="profile_scroll_list">
+                <i class="far fa-id-badge  "></i>
+                <span class="profile_font_size">내 채널</span>
+            </div>
+            <div class="profile_scroll_list">
+                <i class="fas fa-dollar-sign"></i>
+                <span class="profile_font_size">구매 항목 및 멤버십</span>
+            </div>
+            <div class="profile_scroll_list">
+                <i class="fas fa-cog"></i>
+                <span class="profile_font_size"> YouTube 스튜디오</span>
+            </div>
+            <div class="profile_scroll_list">
+                <i class="fas fa-id-card"></i>
+                <span class="profile_font_size">계정 전환</span>
+            </div>
+            <div class="profile_scroll_list border-bottom3">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="profile_font_size">로그아웃</span>
+            </div>
+            <div class="profile_scroll_list">
+                <i class="fas fa-sun"></i>
+                <span class="profile_font_size">디자인: 기기 테마</span>
+            </div>
+            <div class="profile_scroll_list">
+                <i class="fas fa-language"></i>
+                <span class="profile_font_size">언어: 한국어</span>
+            </div>
+            <div class="profile_scroll_list">
+                <i class="fas fa-globe"></i>
+                <span class="profile_font_size">위치: 한국</span>
+            </div>
+            <div class="profile_scroll_list">
+                <i class="fas fa-cogs"></i>
+                <span class="profile_font_size">설정</span>
+            </div>
+            <div class="profile_scroll_list">
+                <i class="fas fa-shield-alt"></i>
+                <span class="profile_font_size">YouTube의 내 데이터</span>
+            </div>
+            <div class="profile_scroll_list">
+                <i class="fas fa-question-circle"></i>
+                <span class="profile_font_size">고객센터</span>
+            </div>
+            <div class="profile_scroll_list">
+                <i class="fas fa-exclamation"></i>
+                <span class="profile_font_size">의견 보내기</span>
+            </div>
+            <div class="profile_scroll_list border-bottom3">
+                <i class="fas fa-keyboard"></i>
+                <span class="profile_font_size">단축키</span>
+            </div>
+            <div class="profile_scroll_list">
+                <span class="profile_font_size">제한 모드: 사용 안함</span>
+            </div>
+        </div>
+           
+           
+           
+       
+       </div>
+</div>
+
+
+
+</body>
+
+</html>
