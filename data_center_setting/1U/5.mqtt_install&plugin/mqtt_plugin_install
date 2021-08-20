@@ -1,0 +1,29 @@
+cd /root/
+git clone https://github.com/jurek7/logstash-input-mqtt.git
+#gpg키 받아오기
+gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703                         113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+#RVM 설치
+
+#default Ruby and Rails 설치
+curl -sSL https://get.rvm.io | bash -s stable --rails
+
+#ruby 2.3.0으로 설치해야 하기 때문
+curl -sSL https://rvm.io/mpapis.asc | gpg --import
+curl -L get.rvm.io | bash -s stable
+source /etc/profile.d/rvm.sh
+rvm reload
+rvm requirements run
+rvm install 2.3.0
+ruby --version
+
+#jruby 설치
+rvm install jruby-9.1.13.0
+
+#GEM 빌드
+cd /root/logstash-input-mqtt
+gem build logstash-input-mqtt.gemspec
+
+#플러그인 설치
+cd /usr/share/logstash/bin
+./logstash-plugin install /root/logstash-input-mqtt/logstash-input-paho-mqtt-0.1.5.gem

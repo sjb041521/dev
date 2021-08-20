@@ -1,0 +1,5 @@
+docker-compose -f create-certs.yml run --rm create_certs
+
+docker-compose up
+
+docker exec es01 /bin/bash -c "bin/elasticsearch-setup-passwords auto --batch --url https://es01:9200"

@@ -1,0 +1,17 @@
+nohup /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/test.conf
+
+
+
+
+
+
+
+docker-compose up
+
+docker exec -it es01 /bin/bash
+
+docker exec es01 /bin/bash -c "bin/elasticsearch-setup-passwords interactive --batch --url https://es01:9200"
+
+docker exec es01 /bin/bash -c "bin/elasticsearch-setup-passwords auto --batch --url https://es01:9200"
+
+docker cp es01:/usr/share/elasticsearch/config/certificates/bundle.zip ~/root/docker/

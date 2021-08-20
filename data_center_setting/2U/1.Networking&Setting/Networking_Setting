@@ -1,0 +1,16 @@
+vi /etc/sysconfig/network-scripts/ifcfg-eno1
+
+ // ifcfg-eno1 파일 내용 아래와 같이 수정
+ #BOOTPROTO="dhcp" // 해당 사항 삭제
+
+ BOOTPROTO="static" 
+ IPADDR="192.168.1.101"
+ NETMASK="255.255.255.0"
+ GATEWAY="192.168.1.1"
+ DNS1="168.126.63.1"
+ DNS2="168.126.63.2"
+
+
+systemctl restart network
+systemctl stop firewalld
+systemctl disable firewalld

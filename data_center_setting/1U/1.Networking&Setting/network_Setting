@@ -1,0 +1,13 @@
+vi /etc/sysconfig/network-scripts/ifcfg-ens33
+#BOOTPROTO="dhcp" //  윗줄 하나 주석시키고
+
+BOOTPROTO="static"
+IPADDR="192.168.1.100"  //원하는 ip 주소
+NETMASK="255.255.255.0" //원하는 서브넷 마스크
+GATEWAY="192.168.1.254" // 원하는 게이트 웨이
+DNS1="168.126.63.1" //dns 설정
+DNS2="168.126.63.2"
+
+systemctl restart network
+systemctl stop firewalld
+systemctl disable firewalld

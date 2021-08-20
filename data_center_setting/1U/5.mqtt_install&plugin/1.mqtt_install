@@ -1,0 +1,32 @@
+#CentOS 7 기본 설정 업데이트
+yum -y update
+yum -y install epel-release
+
+#mosquitto 의존성 패키지 설치
+yum install -y openssl openssl-devel
+yum install -y glibc glibc-devel
+yum install -y libuuid libuuid-devel
+yum install -y docbook-style-xsl
+yum group install -y Development Tools
+
+#방화벽 작동 중지
+systemctl stop firewalld
+systemctl status firewalld
+
+#시스템 reboot 시 방화벽 미 실행(테스트를 위해)
+systemctl mask firewalld  
+
+#mosquitto 설치
+yum -y install mosquitto
+
+#18883 포트 개방
+vi /etc/mosquitto/mosquitto.conf 
+#파일 내 작성
+listener 18883
+
+#mosquitto 실행
+systemctl start mosquitto
+systemctl enable mosquitto
+#18883 포트 개방 확인
+yum -y install net-tools
+netstat -tnl

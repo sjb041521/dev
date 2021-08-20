@@ -1,0 +1,59 @@
+yum -y update
+yum -y install epel-release
+
+#mosquitto 의존성 패키지 설치
+yum install -y openssl openssl-devel
+yum install -y glibc glibc-devel
+yum install -y libuuid libuuid-devel
+yum install -y docbook-style-xsl
+yum group install -y Development Tools
+
+#방화벽 작동 중지
+systemctl stop firewalld
+systemctl status firewalld
+
+#시스템 reboot 시 방화벽 미 실행(테스트를 위해)
+systemctl mask firewalld
+
+#mosquitto 설치
+yum -y install mosquitto
+
+#18883 포트 개방
+#파일 내 작성
+echo "listener 18883" > /etc/mosquitto/mosquitto.conf
+
+#mosquitto 실행
+systemctl start mosquitto
+systemctl enable mosquitto
+#18883 포트 개방 확인
+yum -y install net-tools
+netstat -tnl
+cd /root/
+git clone https://github.com/jurek7/logstash-input-mqtt.git
+#gpg키 받아오기
+gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703                         113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+#RVM 설치
+
+#default Ruby and Rails 설치
+curl -sSL https://get.rvm.io | bash -s stable --rails
+
+#ruby 2.3.0으로 설치해야 하기 때문
+curl -sSL https://rvm.io/mpapis.asc | gpg --import
+curl -L get.rvm.io | bash -s stable
+source /etc/profile.d/rvm.sh
+rvm reload
+rvm requirements run
+rvm install 2.3.0
+ruby --version
+
+#jruby 설치
+rvm install jruby-9.1.13.0
+
+#GEM 빌드
+cd /root/logstash-input-mqtt
+gem build logstash-input-mqtt.gemspec
+
+#플러그인 설치
+cd /usr/share/logstash/bin
+./logstash-plugin install /root/logstash-input-mqtt/logstash-input-paho-mqtt-0.1.5.gem

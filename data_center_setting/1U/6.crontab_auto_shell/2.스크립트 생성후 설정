@@ -1,0 +1,23 @@
+# 경로 생성
+mkdir /root/json
+
+# 파일경로 변경
+mv 1.1u_server_info.sh /root/json
+
+# 파일 복사 후 편집기로 내용 작성하여 재생성
+cat 1.1u_server_info.sh
+
+//내용작성
+vi 1u_server_info.sh
+
+//기존파일삭제
+rm -rf 1.1u_server_info.sh
+
+# 쉘스크립트 실행 하기 위해 권한 부여
+chmod +x 1u_server_info.sh
+
+# 인증서
+es01에서 생성한 ca.crt 를 /root/ca.crt에 생성
+
+# 생성 되는지 확인 위해 실행
+./1u_server_info.sh

@@ -1,0 +1,1 @@
+osqueryi --json  'select (sum(d.blocks-d.blocks_free)*4) as diskused, (sum(d.blocks_free)*4) as diskavailable, m.memory_total as mtotal , (m.memory_free+m.buffers+m.cached) as mAvailable, (m.memory_total-(m.memory_free+m.buffers+m.cached)) as musage from memory_info m join mounts d where d.path="/" or d.path="/home"' >> /root/json/server01.json

@@ -1,0 +1,7 @@
+# 인증서 생성
+docker-compose -f create-certs.yml run --rm create_certs
+
+docker-compose up
+
+# 비밀번호 확인
+docker exec es01 /bin/bash -c "bin/elasticsearch-setup-passwords auto --batch --url https://es01:9200"

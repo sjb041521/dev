@@ -1,0 +1,16 @@
+-----------인덱스 조회---------------------
+curl -u "kibana":"NL3joW6beKSINKHBKfCJ" -XGET 'https://localhost:9200/_cat/indices?v' --cacert /root/ca.crt
+------------인덱스 생성-----------------
+curl -u "elastic":"ZeQkjrmpZp9AL6oAxrIp" -XPUT 'https://localhost:9200/test?pretty' --cacert /root/ca.crt
+------------인덱스 데이터 삽입-----------------
+curl -u "elastic":"ZeQkjrmpZp9AL6oAxrIp" -F 'file1=@/root/json/*.json -XPOST  'https://localhost:9200/test/info/1?pretty' --cacert /root/ca.crt
+curl -u "elastic":"ZeQkjrmpZp9AL6oAxrIp" -XPOST 'https://localhost:9200/test/info/1?pretty' -H 'Content-Type: application/json' -d @/root/json/*.json --cacert /root/ca.crt
+curl -u "elastic":"ZeQkjrmpZp9AL6oAxrIp" -XPOST 'https://localhost:9200/test/info/1?pretty' -H 'Content-Type: application/json' -d @/root/json/memory.json --cacert /root/ca.crt
+curl -u "elastic":"ZeQkjrmpZp9AL6oAxrIp" -XPOST 'https://localhost:9200/test/info/1?pretty' -H 'Content-Type: application/json' -d @/root/json/disk.json --cacert /root/ca.crt
+-----------elastic 상태 확인---------------------
+curl -u "kibana":"NL3joW6beKSINKHBKfCJ" 'https://localhost:9200?pretty=true' --cacert /root/ca.crt
+-----------인덱스 파일 삽입---------------------
+curl  -u "elastic":"ZeQkjrmpZp9AL6oAxrIp" -XPUT 'https://localhost:9200/test/info/1' -H 'Content-Type: application/json' -d @/root/json/*.json --cacert /root/ca.crt //에러
+
+--------------------------test--------------------------------------
+curl -u "elastic":"ZeQkjrmpZp9AL6oAxrIp" -XPUT https://localhost:9200/test/info/1?include_type_name=true -d @/root/json/*.json -H 'Content-Type: application/json' --cacert /root/ca.crt
