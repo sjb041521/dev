@@ -1,0 +1,30 @@
+## backend 실행 방법
+cd backend 
+npm i
+npm start
+
+## frontend 실행 방법
+npm frontend
+npm i
+npm run serve
+
+## DB Mysql table 구조
+
+// 회원가입 DB
+CREATE TABLE pwa_crud.members_list ( 
+   no int(11) NOT NULL AUTO_INCREMENT , 
+   user_id VARCHAR(255) NULL , 
+   password VARCHAR(255) NULL ,
+   sign_date VARCHAR(255) NULL,
+	 PRIMARY KEY (no) );
+
+// 게시글 작성 DB
+
+CREATE TABLE pwa_crud.members_write ( 
+   no int(11) NOT NULL AUTO_INCREMENT , 
+	 user_id VARCHAR(255) NULL , 	 
+	 name VARCHAR(255) NULL,
+	 title VARCHAR(255) NULL,
+	 content VARCHAR(255) NULL,
+   date VARCHAR(255) NULL,
+	 PRIMARY KEY (no) );
