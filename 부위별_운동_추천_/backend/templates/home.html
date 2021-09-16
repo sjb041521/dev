@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>자유 게시판</h3>
+    <!-- users db -->
+    {% for list in users_list %} 
+    {{list.userid}}
+    {%endfor%}
+    <!-- seops db -->
+    {% for seops in seops_list %} 
+    {{seops.no}} {{seops.name}} {{seops.img}} {{seops.status}}
+    {%endfor%}
+    <!-- csv data -->
+    {% for excel in excel_list %} 
+    <div>순서 : {{excel.no}} 날짜 : {{excel.date}} 지역 : {{excel.area}} </div>
+    {%endfor%}
+</body>
+</html>
