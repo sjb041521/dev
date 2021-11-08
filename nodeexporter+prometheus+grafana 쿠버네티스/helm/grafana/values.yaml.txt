@@ -1,0 +1,9 @@
+name: grafana
+externalIP: ""
+image:
+  repository: grafana/grafana
+  tag: "8.2.1"
+service:
+  type: ClusterIP
+  port: 3000
+  nodeport: 30012

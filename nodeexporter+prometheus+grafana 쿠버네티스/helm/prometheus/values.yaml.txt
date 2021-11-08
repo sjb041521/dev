@@ -1,0 +1,26 @@
+name: prometheus
+namespace: monitoring
+replicas: 1
+image:
+  repository: prom/prometheus
+
+containers:
+  storage:
+    mountPath: /prometheus/
+  config:
+    mountPath: /etc/prometheus/
+
+volumes:
+  path: /etc/tmp/prometheus/
+  type: DirectoryOrCreate
+
+configmap:
+  scrap_interval: 15s
+  evaluation_interval: 15s
+  rule_files: /etc/prometheus/prometheus.rules
+
+service:
+  type: NodePort
+  port: 8080
+  targetPort: 9090
+  nodePort: 30003

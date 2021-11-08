@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+       app: {{ .Values.name }}
+  template:
+    metadata:
+      labels:
+         app: {{ .Values.name }}
+    spec:
+      containers:
+        - name: {{ .Values.name }}
+          image: {{ .Values.image.repository }}
+          args:
+            - "--config.file=/etc/prometheus/prometheus.yml"
+            - "--storage.tsdb.path=/prometheus/"
+          ports:
+            - containerPort: 9090
+          volumeMounts:
+            - name: {{ .Values.name }}-config-volume
+              mountPath: {{ .Values.containers.config.mountPath }}
+            - name: {{ .Values.name }}-storage-volume
+              mountPath: {{ .Values.containers.storage.mountPath }}
+      volumes:
+        - name: {{ .Values.name }}-config-volume
+          configMap:
+            defaultMode: 420
+            name: {{ .Values.name }}
+
+        - name:{{ .Values.name }}-storage-volume
+          emptyDir: {}

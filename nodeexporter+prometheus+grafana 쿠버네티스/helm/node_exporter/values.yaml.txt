@@ -1,0 +1,4 @@
+name: node-exporter
+image:
+  repository: prom/node-exporter
+  tag: "v1.2.2"
